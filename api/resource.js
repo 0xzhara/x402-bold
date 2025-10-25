@@ -11,8 +11,8 @@ export default async function handler(req) {
           network: "base",
           assetType: "token",
           asset: "USDC",
-          minAmountRequired: "0.5",
-          maxAmountRequired: "0.5",
+          minAmountRequired: "500000",
+          maxAmountRequired: "500000",
           resource: "https://x402-bold.vercel.app/api/resource",
           description: "Resource using USDC payment via x402 protocol.",
           mimeType: "application/json",
@@ -27,7 +27,7 @@ export default async function handler(req) {
                 amount: {
                   type: "string",
                   required: true,
-                  description: "Amount of USDC to send",
+                  description: "Amount of USDC to send (in smallest unit)",
                 },
                 sender: {
                   type: "string",
