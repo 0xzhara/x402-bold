@@ -1,7 +1,7 @@
 {
-  "name": "x402-base-demo",
+  "name": "x402-bold",
   "version": "1.0.0",
-  "description": "Test-but-real x402 resource for Base Network",
+  "description": "x402 resource",
   "main": "api/resource.js",
   "license": "MIT"
 }
