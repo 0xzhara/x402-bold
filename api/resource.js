@@ -10,7 +10,7 @@ export default async function handler(req) {
         {
           scheme: "exact",
           network: "base",
-          maxAmountRequired: "0.5",
+          maxAmountRequired: 0.5,
           resource: "https://x402-bold.vercel.app/api/resource",
           description: "Resource using USDC payment via x402 protocol.",
           mimeType: "application/json",
