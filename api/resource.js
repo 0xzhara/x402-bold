@@ -21,25 +21,25 @@ export default function handler(req, res) {
               amount: {
                 type: "string",
                 required: true,
-                description: "The amount of USDC to send",
+                description: "The amount of USDC to send"
               },
               sender: {
                 type: "string",
                 required: true,
-                description: "The address of the sender",
-              },
-            },
+                description: "The address of the sender"
+              }
+            }
           },
           output: {
             message: "Payment received successfully",
-            status: "success",
-          },
+            status: "success"
+          }
         },
         extra: {
-          note: "x402 resource",
-        },
-      },
+          note: "x402 resource"
+        }
+      }
     ],
-    payer: "0x95843f83F1D9Dd717d8C4Fe8BC94C51acaee1Cac",
+    payer: "0x95843f83F1D9Dd717d8C4Fe8BC94C51acaee1Cac"
   });
 }
