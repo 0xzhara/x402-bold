@@ -1,12 +1,22 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/server.js",
-      "use": "@vercel/node"
+  "functions": {
+    "api/resource.js": {
+      "runtime": "nodejs18.x",
+      "maxDuration": 10,
+      "memory": 128,
+      "includeFiles": ["api/resource.js"]
     }
-  ],
+  },
   "routes": [
-    { "src": "/api/(.*)", "dest": "api/server.js" }
+    {
+      "src": "/api/resource",
+      "dest": "/api/resource.js",
+      "headers": {
+        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0"
+      }
+    }
   ]
 }
