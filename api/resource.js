@@ -1,6 +1,4 @@
-export const config = {
-  runtime: "edge",
-};
+export const config = { runtime: "edge" };
 
 export default async function handler(req) {
   return new Response(
@@ -13,9 +11,8 @@ export default async function handler(req) {
           network: "base",
           assetType: "token",
           asset: "USDC",
-          // gunakan smallest unit (6 desimal untuk USDC di Base)
-          minAmountRequired: "500000", 
-          maxAmountRequired: "500000",
+          minAmountRequired: "0.5",
+          maxAmountRequired: "0.5",
           resource: "https://x402-bold.vercel.app/api/resource",
           description: "Resource using USDC payment via x402 protocol.",
           mimeType: "application/json",
@@ -30,12 +27,12 @@ export default async function handler(req) {
                 amount: {
                   type: "string",
                   required: true,
-                  description: "The amount of USDC to send (in smallest unit)",
+                  description: "Amount of USDC to send",
                 },
                 sender: {
                   type: "string",
                   required: true,
-                  description: "The address of the sender",
+                  description: "Sender wallet address",
                 },
               },
             },
@@ -44,9 +41,7 @@ export default async function handler(req) {
               status: "success",
             },
           },
-          extra: {
-            note: "x402 resource",
-          },
+          extra: { note: "x402 resource" },
         },
       ],
       payer: "0x95843f83F1D9Dd717d8C4Fe8BC94C51acaee1Cac",
