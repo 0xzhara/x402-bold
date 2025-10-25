@@ -1,3 +1,4 @@
+// force rebuild 2025-10-25
 export default function handler(req, res) {
   res.status(402).json({
     x402Version: 1,
