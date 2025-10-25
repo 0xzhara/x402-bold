@@ -11,9 +11,10 @@ export default async function handler(req) {
           version: "1.0",
           scheme: "exact",
           network: "base",
+          assetType: "token", // <--- field baru yang wajib ada
+          asset: "USDC",
           minAmountRequired: "0.500000000000000000",
           maxAmountRequired: "0.500000000000000000",
-          asset: "USDC",
           resource: "https://x402-bold.vercel.app/api/resource",
           description: "Resource using USDC payment via x402 protocol.",
           mimeType: "application/json",
