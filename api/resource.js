@@ -8,16 +8,17 @@ export default async function handler(req) {
       x402Version: 1,
       accepts: [
         {
-          version: "1.0", // optional tapi disarankan agar valid di parser baru
+          version: "1.0",
           scheme: "exact",
           network: "base",
-          maxAmountRequired: "0.5", // harus string
+          minAmountRequired: "0.5",
+          maxAmountRequired: "0.5",
+          asset: "USDC",
           resource: "https://x402-bold.vercel.app/api/resource",
           description: "Resource using USDC payment via x402 protocol.",
           mimeType: "application/json",
           payTo: "0x95843f83F1D9Dd717d8C4Fe8BC94C51acaee1Cac",
           maxTimeoutSeconds: 120,
-          asset: "USDC",
           outputSchema: {
             input: {
               type: "http",
