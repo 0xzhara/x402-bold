@@ -2,7 +2,7 @@
   "version": 2,
   "functions": {
     "api/resource.js": {
-      "runtime": "nodejs18.x",
+      "runtime": "vercel-nodejs@18.0.0",
       "maxDuration": 10,
       "memory": 128,
       "includeFiles": "api/resource.js"
