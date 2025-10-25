@@ -1,7 +1,7 @@
 {
   "name": "x402-bold",
   "version": "1.0.0",
-  "description": "x402 resource for Base Network (USDC)",
+  "description": "x402 Base resource",
   "main": "api/resource.js",
   "license": "MIT"
 }
